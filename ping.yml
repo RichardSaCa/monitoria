@@ -1,5 +1,5 @@
 ---
-- hosts: 10.132.32.159
+- hosts: 10.132.32.157
   tasks:
     - name: ping to host
       action: ping
