@@ -1,5 +1,6 @@
 ---
 - hosts: 10.132.32.159
+  become: yes
   tasks:
     - name: ping to host
       action: ping
