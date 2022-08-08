@@ -1,0 +1,18 @@
+---
+- hosts: 192.168.53.10
+  tasks:
+    - name: match on ip ranges
+      ansible.builtin.iptables:
+        chain: FORWARD
+        src_range: 192.168.1.100-192.168.1.199
+        dst_range: 10.0.0.1-10.0.0.50
+        jump: ACCEPT
+    - name: allow forward syn on tcp port (ssh)
+      ansible.builtin.iptables:
+        chain: FORWARD
+        protocol: tcp
+        destination_port: 80
+        ctstate: NEW
+        syn: match
+        jump: DROP
+        comment: drop new ssh conections

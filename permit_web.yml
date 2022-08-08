@@ -1,0 +1,20 @@
+---
+- hosts: 192.168.53.10
+  tasks:
+    - name: permit service web mz to dmz
+      ansible.builtin.iptables:
+        chain: FORWARD
+        protocol: tcp
+        destination_port: 80 
+        source: 10.10.10.2
+        destination: 20.20.20.2
+        jump: ACCEPT
+    
+    - name: permit service ssh mz to dmz
+      ansible.builtin.iptables:
+        chain: FORWARD
+        protocol: tcp
+        source_port: 80
+        source: 20.20.20.2
+        destination: 10.10.10.2
+        jump: ACCEPT
