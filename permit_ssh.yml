@@ -1,5 +1,6 @@
 ---
 - hosts: 10.132.32.166
+  become: yes
   tasks:
     - name: permit service ssh dmz to mz
       ansible.builtin.iptables:
