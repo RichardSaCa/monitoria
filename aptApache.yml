@@ -3,4 +3,4 @@
       
       tasks:
         - name: install apache https
-          apt: name=ap state=latest 
+          apt: name=apache2 state=latest 
