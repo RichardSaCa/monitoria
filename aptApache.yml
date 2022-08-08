@@ -1,6 +1,6 @@
 ---
     - hosts: 10.132.32.166
-      become: yes
+      
       tasks:
         - name: install apache https
-          apt: name=apache2 state=latest 
+          apt: name=apache2 update_cache=yes state=latest 
