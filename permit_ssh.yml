@@ -1,5 +1,5 @@
 ---
-- hosts: 192.168.43.85
+- hosts: 192.168.43.90
   become: yes
   tasks:
     - name: permit service ssh dmz to mz
