@@ -8,6 +8,6 @@
         - name: "install vsftpd"
           apt: name=vsftpd state=latest
         - name: "install ansible"
-          apt: name=openssh-server state=latest
+          apt: name=ansible state=latest
         
     
