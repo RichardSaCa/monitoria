@@ -15,10 +15,6 @@
       ansible.builtin.apt_repository:
         repo: "deb http://ftp.br.debian.org/debian/ buster main"
         state: present
-    - name: "add repository 4"
-      ansible.builtin.apt_repository:
-        repo: "deb http://ftp.es.debian.org/debian/ buster main"
-        state: present
 
 
 
