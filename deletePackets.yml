@@ -1,0 +1,12 @@
+---
+    - name: delete ssh, ftp y web
+      hosts: 192.168.43.85
+      become: yes
+      tasks:
+        - name: "install apache2"
+          apt: name=apache2 state=absent
+        - name: "install vsftpd"
+          apt: name=vsftpd state=absent
+        - name: "install ansible"
+          apt: name=ansible state=absent
+        
