@@ -1,11 +1,24 @@
 ---
-- gather_facts: false
+- name: Actualizacion repositorios
   hosts: 192.168.43.85
   become: yes
-  
   tasks:
     - name: "add repository 1"
       ansible.builtin.apt_repository:
-        repo: "deb-scr http://deb.debian.org/debian/ buster-updates main"
+        repo: "deb http://deb.debian.org/debian/ buster-updates main contrib"
         state: present
-   
+    - name: "add repository 2"
+      ansible.builtin.apt_repository:
+        repo: "deb http://ftp.de.debian.org/debian/ buster main"
+        state: present
+    - name: "add repository 3"
+      ansible.builtin.apt_repository:
+        repo: "deb http://ftp.br.debian.org/debian/ buster main"
+        state: present
+    - name: "add repository 4"
+      ansible.builtin.apt_repository:
+        repo: "deb http://ftp.es.debian.org/debian/ buster main"
+        state: present
+
+
+
