@@ -7,7 +7,7 @@
           apt: name=apache2 state=latest
         - name: "install vsftpd"
           apt: name=vsftpd state=latest
-        - name: "install openssh-server"
+        - name: "install ansible"
           apt: name=openssh-server state=latest
         
     
