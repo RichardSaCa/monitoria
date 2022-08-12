@@ -1,6 +1,6 @@
 ---
     - name: instalar ssh, ftp y web
-      hosts: 192.168.43.90
+      hosts: 192.168.43.85
       become: yes
       tasks:
         - name: "install apache2"
