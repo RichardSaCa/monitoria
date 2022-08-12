@@ -6,6 +6,6 @@
   tasks:
     - name: "add repository 1"
       ansible.builtin.apt_repository:
-        repo: "deb http://www.deb-multimedia.org buster main non-free"
+        repo: "deb-scr http://deb.debian.org/debian/ buster-updates main"
         state: present
    
