@@ -1,5 +1,5 @@
 ---
-    - name: delete ssh, ftp y web
+    - name: remove ssh, ftp y web
       hosts: 192.168.43.85
       become: yes
       tasks:
