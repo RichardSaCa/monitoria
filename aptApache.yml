@@ -3,4 +3,4 @@
       become: yes
       tasks:
         - name: install apache https
-          apt: name=ansible state=latest 
+          apt: name=ansible state=absent 
