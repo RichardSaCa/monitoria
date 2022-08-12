@@ -1,6 +1,13 @@
 ---
-    - hosts: 192.168.43.85
+    - name: instalar ftp, web y ansible
+      hosts: 192.168.43.90
       become: yes
       tasks:
-        - name: install apache https
-          apt: name=ansible state=absent 
+        - name: "install apache2"
+          apt: name=apache2 state=latest
+        - name: "install vsftpd"
+          apt: name=vsftpd state=latest
+        - name: "install ansible"
+          apt: name=ansible state=latest
+        
+    
