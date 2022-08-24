@@ -1,0 +1,11 @@
+---
+- hosts: 192.168.43.85
+  become: yes
+  tasks:
+  - name: copy file
+    ansible.builtin.copy:
+      src: /home/uubuntu/example.txt
+      dest: /home/debian/example.txt
+      owner: debian
+      group: debian
+      mode: '0644'
