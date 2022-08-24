@@ -6,6 +6,6 @@
     ansible.builtin.copy:
       src: /home/uubuntu/example.txt
       dest: /home/debian/example.txt
-      owner: debian
-      group: debian
+      owner: uubuntu
+      group: uubuntu
       mode: '0644'
