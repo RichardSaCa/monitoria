@@ -4,7 +4,7 @@
   tasks:
   - name: copy file
     ansible.builtin.copy:
-      src: example.txt
+      src: uubuntu/example.txt
       dest: /home/debian/example.txt
       owner: uubuntu
       group: uubuntu
