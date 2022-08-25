@@ -1,6 +1,6 @@
 ---
     - name: install policy ssh ftp web
-      hosts: 192.168.43.90
+      hosts: 192.168.101.90
       become: yes
       tasks:
         - name: accept service ssh dmz to mz
