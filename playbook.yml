@@ -1,6 +1,7 @@
 - name: playbook enviroment
   hosts: 192.168.101.103
   become: yes
+  become_user: root
   tasks:
   - name: copy docker-compose.yml 
     copy:
