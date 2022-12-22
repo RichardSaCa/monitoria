@@ -1,6 +1,0 @@
----
-- hosts: "{{server1}}"
-  become: yes
-  tasks:
-    - name: ping to host
-      action: ping
