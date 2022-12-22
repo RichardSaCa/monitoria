@@ -1,5 +1,5 @@
 - name: playbook enviroment
-  hosts: 192.168.101.103
+  hosts: "{{servidor_1}}"
   become: yes
   become_user: root
   tasks:
@@ -12,8 +12,8 @@
     copy: 
       dest: ejemplo_ansible/.env
       content: 
-        PORT="81:80"
-        version="3"
+        PORT="{{puerto}}"
+        version="{{num_version}}"
   - name: test docker-compose with .env
     shell:
       cmd: "sudo docker-compose up -d"
