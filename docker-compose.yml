@@ -2,6 +2,11 @@ version: ${version}
 
 services:
   web:
-    image: httpd:latest
+    image: httpd:${version_web}
     ports:
       - ${PORT}
+  db: 
+    image: mariadb:latest
+    expose: "3306"
+    environment: 
+      MARIADB_ROOT_PASSWORD: example

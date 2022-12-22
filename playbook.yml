@@ -1,4 +1,4 @@
-- name: playbook enviroment
+- name: playbook environment
   hosts: "{{servidor_1}}"
   become: yes
   become_user: root
@@ -14,7 +14,8 @@
       content: 
         PORT="{{puerto}}"
         version="{{num_version}}"
+        version_web="{{version_num}}"
   - name: test docker-compose with .env
     shell:
-      cmd: "sudo docker-compose up -d"
+      cmd: "sudo docker-compose up -d --build"
       chdir: ejemplo_ansible/
