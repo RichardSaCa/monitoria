@@ -1,0 +1,20 @@
+- name: playbook enviroment
+  hosts: 192.168.101.103
+  become: yes
+  become_user: root
+  tasks:
+  - name: copy docker-compose.yml 
+    copy:
+      src: docker-compose.yml
+      dest: ejemplo_ansible/
+  #creamos el archivo .env para variables de entorno
+  - name: create and copy file .env
+    copy: 
+      dest: ejemplo_ansible/.env
+      content: 
+        PORT="81:80"
+        version="3"
+  - name: test docker-compose with .env
+    shell:
+      cmd: "sudo docker-compose up -d"
+      chdir: ejemplo_ansible/
