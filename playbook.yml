@@ -5,7 +5,7 @@
   tasks:
   - name: copy folder complete
     copy:
-      src: docker-lamp/
+      src: ./
       dest: infra-lamp/
   #creamos el archivo .env para variables de entorno
   - name: create and copy file .env
