@@ -1,0 +1,22 @@
+- name: playbook environment
+  hosts: "{{servidor_1}}"
+  become: yes
+  become_user: root
+  tasks:
+  - name: copy folder complete
+    copy:
+      src: docker-lamp/
+      dest: infra-lamp/
+  #creamos el archivo .env para variables de entorno
+  - name: create and copy file .env
+    copy: 
+      dest: infra-lamp/.env
+      content: 
+        version="{{num_version}}"
+        puerto_mysql="{{puerto_mysql}}"
+        puerto_www="{{puerto_www}}"
+        puerto_db="{{puerto_db}}"   
+  - name: test docker-compose with .env
+    shell:
+      cmd: "sudo docker-compose up -d"
+      chdir: ejemplo_ansible/
