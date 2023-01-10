@@ -8,7 +8,8 @@
     <body>
         <div class="container-fluid">
             <?php
-                echo "<h1>¡Hola, Antonio te da la bienvenida!</h1>";
+                echo "<h1>¡Hola,MONITORIA SERVIDORES!</h1>";
+                echo "<h1>Ejemplo tomado de: https://www.youtube.com/watch?v=v-r_12oezds </h1>";
 
                 $conn = mysqli_connect('db', 'root', 'test', "dbname");
 
